@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 30, 30, 0.4);
+            z-index: -1;
+        }
+
+        /* Стиль для кнопки "В меню" */
+        .back-button {
+            margin: 40px 0;
+            padding: 16px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(to right, #0066cc, #00bfff);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .back-button:hover::before {
+            left: 100%;
+        }
+
+        .back-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Блоки с иконками */
+        .social-block {
+            text-align: center;
+            margin: 30px 0;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+        }
+
+        /* Заголовки блоков */
+        .block-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #00bfff;
+        }
+
+        /* Футер */
+        .footer {
+            margin-top: auto;
+            padding: 20px 0;
+            text-align: center;
+            color: #ddd;
+            font-size: 14px;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            width: 100%;
+        }
+
+        .version {
+            color: #00bfff;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+        }
+
+        .author {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Блок социальных сетей игры -->
+    <div class="social-block">
+        <h2 class="block-title">Соц сети игры</h2>
+        <div class="icons-container">
+            <a href="https://www.youtube.com/channel/UC8-FsZ4oaW4k0Tlydl54lmg/featured"><img src="youtube.png" alt="VK" class="social-icon"></a>
+            <a href="https://discord.gg/rtjSyFhWXQ"><img src="discord.png" alt="Discord" class="social-icon"></a>
+            <a href="https://t.me/HaxballDraftManager"><img src="telegram.png" alt="Telegram" class="social-icon"></a>
+        </div>
+    </div>
+
+    <!-- Блок контактов разработчика -->
+    <div class="social-block">
+        <h2 class="block-title">Контакты разработчика</h2>
+        <div class="icons-container">
+            <a href="https://t.me/jorayoung761"><img src="telegram.png" alt="Email" class="social-icon"></a>
+            <a href="https://vk.com/coraline161"><img src="vk.png" alt="GitHub" class="social-icon"></a>
+        </div>
+    </div>
+
+<a href="PLAY.html" class="back-button">В меню</a>
+
+    <!-- Футер -->
+    <div class="footer">
+        <p class="author">Автор игры - Jora young (NoStuff)</p>
+        <p>Haxball Draft Manager</p>
+        <p class="version">v.1.0</p>
+    </div>
+</body>
+</html>
